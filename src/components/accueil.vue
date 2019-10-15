@@ -33,6 +33,7 @@
 // };
 export default {
   name: "TextFields",
+  msg: String,
   data: () => ({
     initial: "Initial Value",
     type: null,
@@ -41,7 +42,8 @@ export default {
     number: null,
     textarea: null,
     autogrow: null,
-    disabled: null
+    disabled: null,
+    message: this.msg
   })
 };
 </script>
