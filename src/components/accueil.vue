@@ -16,7 +16,7 @@
       </md-field>
 
       <md-card-actions>
-        <router-link :to="{name: 'question'}">
+        <router-link :to="{name: 'questionnaire'}">
           <md-button type="submit" class="md-primary">Commencer le test</md-button>
         </router-link>
       </md-card-actions>
