@@ -3,10 +3,8 @@
     <md-card>
       <div>
         <div>
-          <h1>Qui est mon voisin</h1>
-          <md-checkbox v-model="rep1">{{titre}}</md-checkbox>
-          <md-checkbox v-model="rep2">Anais</md-checkbox>
-          <md-checkbox v-model="rep3">Le mur</md-checkbox>
+          <h1>{{titre}}</h1>
+          <md-checkbox v-model="rep1" v-for="r in reponses" v-bind:key="r">{{r.reponses}}</md-checkbox>
           <br />
           <router-link :to="{name: 'result'}">
             <md-button type="submit" class="md-primary">Répondre</md-button>
@@ -29,7 +27,8 @@ export default {
     rep3: false
   }),
   props: {
-    titre: String
+    titre: String,
+    reponses: Array
   }
 };
 </script>

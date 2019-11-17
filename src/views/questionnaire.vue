@@ -1,7 +1,8 @@
 <template>
   <div>
+    Questions :
     <div v-for="q in questions" v-bind:key="q">
-      <question titre="{{q.titre}}" />
+      <question :titre="q.titre" :reponses="q.reponses" />
     </div>
   </div>
 </template>
