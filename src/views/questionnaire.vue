@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Création de questionnaire de questions -->
     Questions :
     <div v-for="q in questions" v-bind:key="q">
       <question :titre="q.titre" :reponses="q.reponses" />
@@ -8,17 +9,12 @@
 </template>
 
 <script>
-// export default {
-//   name: "accueil",
-//   props: {
-//     msg: String
-//   }
-// };
 import question from "@/components/question.vue";
 
 export default {
   name: "questionnaire",
   msg: String,
+  // Structure des questions
   data: () => ({
     questions: [
       {

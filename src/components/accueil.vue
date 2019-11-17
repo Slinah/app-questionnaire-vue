@@ -1,4 +1,5 @@
 <template>
+  <!-- Affichage du formulaire d'Entreprise -->
   <div class="hello">
     <h1>{{ msg }}</h1>
     <form class="md-layout">
@@ -25,12 +26,6 @@
 </template>
 
 <script>
-// export default {
-//   name: "accueil",
-//   props: {
-//     msg: String
-//   }
-// };
 export default {
   name: "TextFields",
   msg: String,

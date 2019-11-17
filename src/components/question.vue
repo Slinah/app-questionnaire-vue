@@ -3,6 +3,7 @@
     <md-card>
       <div>
         <div>
+          <!-- Affichage de questions -->
           <h1>{{titre}}</h1>
           <md-checkbox v-model="rep1" v-for="r in reponses" v-bind:key="r">{{r.reponses}}</md-checkbox>
           <br />
@@ -17,8 +18,6 @@
 
 
 <script>
-// @ is an alias to /src
-
 export default {
   name: "question",
   data: () => ({
