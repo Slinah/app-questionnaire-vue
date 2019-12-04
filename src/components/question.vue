@@ -4,12 +4,8 @@
       <div>
         <div>
           <!-- Affichage de questions -->
-          <h1>{{titre}}</h1>
-          <md-checkbox v-model="rep1" v-for="r in reponses" v-bind:key="r">{{r.reponses}}</md-checkbox>
-          <br />
-          <router-link :to="{name: 'result'}">
-            <md-button type="submit" class="md-primary">Répondre</md-button>
-          </router-link>
+          <h1>{{question.titre}}</h1>
+          <md-checkbox v-for="reponse in question.reponses" v-bind:key="reponse.id" v-model="reponse.answer">{{reponse.libelle}}</md-checkbox>
         </div>
       </div>
     </md-card>
@@ -20,14 +16,6 @@
 <script>
 export default {
   name: "question",
-  data: () => ({
-    rep1: false,
-    rep2: false,
-    rep3: false
-  }),
-  props: {
-    titre: String,
-    reponses: Array
-  }
+  props: ["question"]
 };
 </script>

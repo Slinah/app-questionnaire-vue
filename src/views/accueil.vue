@@ -1,19 +1,18 @@
 <template>
   <!-- Affichage du formulaire d'Entreprise -->
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <form class="md-layout">
       <md-field>
         <label>Nom</label>
-        <md-input v-model="initial"></md-input>
+        <md-input v-model="Nom"></md-input>
       </md-field>
       <md-field>
         <label>Prénom</label>
-        <md-input v-model="initial"></md-input>
+        <md-input v-model="Prenom"></md-input>
       </md-field>
       <md-field>
         <label>Entreprise</label>
-        <md-input v-model="initial"></md-input>
+        <md-input v-model="Entreprise"></md-input>
       </md-field>
 
       <md-card-actions>
@@ -28,17 +27,11 @@
 <script>
 export default {
   name: "TextFields",
-  msg: String,
   data: () => ({
-    initial: "Initial Value",
-    type: null,
-    withLabel: null,
-    inline: null,
-    number: null,
-    textarea: null,
-    autogrow: null,
-    disabled: null,
-    message: this.msg
+    Nom: "",
+    Prenom: "",
+    Entreprise: "",
+
   })
 };
 </script>
